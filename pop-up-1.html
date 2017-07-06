@@ -1,414 +1,176 @@
-<!-- Modal Form -->
-<div id="ltkmodal-wrapper" class="signup" name="version1">
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <!-- SVG Close Button -->
-    <div id="ltk-close-button">
-        <a class="ltkmodal-close" title="Close">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0px" height="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-                <polygon id="x-mark-icon" points="438.393,374.595 319.757,255.977 438.378,137.348 374.595,73.607 255.995,192.225 137.375,73.622 73.607,137.352 192.246,255.983 73.622,374.625 137.352,438.393 256.002,319.734 374.652,438.378 "/>
-            </svg>
-        </a>
-    </div>
-    <!-- End SVG Close Button -->
-
-    <div id="ltkmodal-contentarea" class="signup ltk-clearfix">
-        <div class="ltk-img-container">
-            <img src="http://media.lt02.net/1/Shared/2016/Modal/ListrakExpress/placeholder.jpg" alt="Alt Text Here">
-        </div>
-        <!-- Content Information -->
-        <div id="contentInformation" class="ltk-clearfix">
-            <h3>TAKE 20</h3>
-            <p>Save 20% and hear about the latest exclusive styles before anyone else! Sign up for our VIP emails and&nbsp;stay&nbsp;informed.</p>
-
-            <div class="ltk-error-message" data-ltk-error-for="email" data-ltk-message="Please enter a valid email"></div>
-            <div class="ltk-input-container ltk-clearfix">
-                <input required type="email" id="ltkmodal-email" class="ltkmodal-email" name="email" placeholder="Email Address" pattern="^([a-zA-Z0-9._+!-]+[@](?:[a-zA-Z0-9-]+.)+[a-zA-Z]{2,})$" onkeypress="return searchKeyPress(event);" />
-                <input type="button" id="submitButton" class="ltkmodal-subscribe" title="SIGN UP" Value="SIGN UP">
-            </div>
-
-            <div class="field">
-                <input type="hidden" class="text" name="Source.Modal" value="On" />
-            </div>
-        </div>
-        <!-- End Content Information -->
-    </div>
-</div>
-
-<!-- Modal Scripts -->
-<script type="text/javascript">
-    // Enter Key Submit
-    function searchKeyPress(e) {
-        // look for window.event in case event isn't passed in
-        e = e || window.event;
-        if (e.keyCode == 13)
-        {
-            document.getElementById('submitButton').click();
-            return false;
-        }
-        return true;
-    }
-    // Modal Centering Script
-    setTimeout(function() {
-        if (window.innerWidth < 500) {
-            var modalDistance = document.body.scrollTop;
-            console.log(modalDistance);
-
-            document.querySelector("#ltkmodal-container").style.marginTop = modalDistance + 'px';
-            document.querySelector("#ltkmodal-container").style.setProperty ("position", "absolute", "important");
-        }
-        else {
-            console.log("This is desktop");
-        };
-    }, 4700);
-</script>
+<body>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600' rel='stylesheet' type='text/css'>
+  <div class="wrap">
+  <div class="central">
+  	<div class="mainpic">
+  		<img src="http://i.imgur.com/O3LL4Pn.png" width="300" height="460">
+  	</div>
+  	<div class="info">
+  	     <div class="close">
+  	     	<img src="http://garro.me/pp/sw/close.png" width="14">
+  	     </div>
+  		<div class="title">
+  			<div class="maintitle">STAR WARS</div>
+            <p> THE FORCE AWAKENS </p>
+            <span class="onder_title">December 18, 2015</span>
+  		</div>
+  		
+  			<p class="long"> Thirty years after defeating the Galactic Empire, 
+Han Solo and his allies face a new threat from 
+the evil Kylo Ren and his army of Stormtroopers.</p>
+  		
+  		<div class="button">
+  			<span>Learn More</span>
+  		</div>
+  	</div>
+  </div>
+  </div>
+</body>
 
 <style type="text/css">
-/* Element that covers entire screen */
-#ltkmodal-overlay {
-  /* Increase z-index as needed */
-	z-index: 100001 !important;
-	background-color: #000 !important;
-	opacity: 0.65 !important;
-	position: fixed !important;
-	width: 100% !important;
-	height: 100% !important;
-	top: 0 !important;
-	bottom: 0 !important;
-}
-#ltkmodal-container {
-  /* z-index must be higher than overlay */
-	z-index: 100010 !important;
-	position: fixed !important;
-  /* Define Desktop Container width */
-	width: 656px !important;
-	height: 344px !important;
-  /* Centers Modal On Page */
-	top: 50% !important;
-	left: 50% !important;
-	margin-left: 0 !important;
-	-webkit-transform: translate(-50%, -50%) !important;
-	-moz-transform: translate(-50%, -50%) !important;
-	-ms-transform: translate(-50%, -50%) !important;
-	transform: translate(-50%, -50%) !important;
-}
-#ltkmodal-container .simpleltkmodal-wrap {
-	overflow: visible !important;
-}
-#ltkmodal-wrapper {
-	position: relative;
-	margin: 0 auto;
-	width: 100% !important;
+  body {
+    margin: 0; 
+    padding: 0;
 }
 
-/************************************************************************
-Clearfix - Add ltk-clearfix as a class to any element you need to clear
-************************************************************************/
-#ltkmodal-wrapper .ltk-clearfix::before,
-#ltkmodal-wrapper .ltk-clearfix::after {
-  content: "";
-  display: table;
+.wrap {
+    background-image: url(http://i.imgur.com/RZITgDX.png);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 500px;
+    text-align: center;
 }
 
-#ltkmodal-wrapper .ltk-clearfix::after {
-  clear: both;
+.central {
+    font-family: Open Sans;
+    position: relative;
+    display: inline-block;
+    height: 460px;
+    width: 660px;
+    margin: 15px auto;
+    box-shadow: rgba(0, 0, 0, 0.19);
 }
 
-#ltkmodal-wrapper .ltk-clearfix {
-  zoom: 1;
+.mainpic {
+    position: absolute;
+    left: 0;
+    width: 330px;
+    height: 460px;
+    display: inline-block;
+    border-radius: 4px 0 4px 0;
 }
 
-/************************************************************************
-_______________  MODAL STYLES GO BELOW THIS COMMENT  ____________________
-************************************************************************/
-#ltkmodal-wrapper * {
-	box-sizing: border-box;
-	backface-visibility: hidden !important;
-}
-#ltkmodal-wrapper {
-  /* Sets Base Font Family & Size */
-	background: transparent;
-	font-size: 16px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-#ltkmodal-wrapper .no-wrap {
-	white-space: nowrap;
-}
-/* Close Button Size, Style And Position */
-#ltkmodal-wrapper #ltk-close-button {
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	z-index: 10;
-	margin: 0px;
-}
-#ltkmodal-wrapper #ltk-close-button a {
-  /* Set Desired Size */
-	width: 17px;
-	height: 17px;
-	display: block;
-	cursor: pointer;
-}
-#ltkmodal-wrapper #ltk-close-button a svg {
-  /* SVG Fills To Size Defined Above */
-	width: 100%;
-	height: 100%;
-	vertical-align: top;
-	fill: #666666;
-	-webkit-transition: all 0.11s linear;
-	transition: all 0.11s linear;
-}
-/* Close Button Hover Effect */
-@media only screen and (min-width: 462px)  {
-	#ltkmodal-wrapper #ltk-close-button a svg:hover {
-		-webkit-transform: rotate(90deg);
-			-ms-transform: rotate(90deg);
-				transform: rotate(90deg);
-		fill: #111;
-	}
+
+
+.info {
+    display: inline-block;
+    width: 330px;
+    height: 460px;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
 }
 
-/* Width And Padding On Form Content Info */
-#ltkmodal-wrapper #contentInformation {
-	padding: 70px 70px 0 70px;
-	width: 460px;
-	float: right;
-}
-#ltkmodal-wrapper .ltk-img-container {
-	float: left;
-    width: 196px;
-    height: 100%;
-    vertical-align: top;
-    overflow: hidden;
-}
-#ltkmodal-wrapper .ltk-img-container img {
-	width: auto;
-	height: 100%;
-	vertical-align: top;
-	display: block;
-}
-/* Body */
-/* Text Styles */
-#contentInformation h1,
-#contentInformation h2,
-#contentInformation h3,
-#contentInformation h4,
-#contentInformation h5 {
-	margin: 0;
-	padding: 0;
-}
-#ltkmodal-contentarea {
-	background: #ffffff;
-	font-size: 14px;
-	line-height: 22px;
-	color: #333333;
-	text-align: center;
-}
-#contentInformation h3 {
-	font-family: Times, Georgia, serif;
-	display: block;
-	font-size: 52px;
-	font-style: italic;
-	line-height: 1em;
-	color: #333333;
-}
-#contentInformation p {
-	margin: 24px 0;
-}
-#contentInformation .ltk-input-container {
+
+
+.close {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 21px;
+    top: 21px;
+    cursor: pointer;
 }
 
-/* Form Fields and Inputs */
-#contentInformation input[type="text"],
-#contentInformation input[type="email"],
-#contentInformation input[type="number"] {
-	width: 70%;
-	float: left;
-	font-weight: bold;
-	border: 1px solid #bdbdbd;
-	text-align: left;
-	color: #333333;
-	font-size: 15px;
-	line-height: 40px;
-	height: 40px;
-	border-radius: 0px !important;
-	box-shadow: none !important;
-	padding: 0 0 0 15px;
-	display: block;
-	margin: 0 auto;
-	-webkit-transition: all 0.11s linear;
-	transition: all 0.11s linear;
-	-webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-#contentInformation input[type="text"]:focus,
-#contentInformation input[type="email"]:focus,
-#contentInformation input[type="number"]:focus {
-	outline: none;
-}
-#contentInformation input::-webkit-input-placeholder {
-	color: #929292;
-	font-weight: normal;
-	opacity: 1;
-}
-#contentInformation input::-moz-placeholder {
-	color: #929292;
-	font-weight: normal;
-	opacity: 1;
-}
-#contentInformation input:-ms-input-placeholder {
-	color: #929292;
-	font-weight: normal;
-	opacity: 1;
-}
-#contentInformation input::-ms-clear { /* Removes X on input in ie10+ */
-	display: none;
-	opacity: 0;
-	width: 0;
-	height: 0;
+
+.title {
+    text-align: center;
 }
 
-/* Input Validation and Error Message Styles */
-/*---------------------*/
-#contentInformation input.ltkinputnotvalid,
-#contentInformation div.dropdown.ltk-select-notvalid {
-	border-color: red;
-}
-#contentInformation input.ltkinputnotvalid::-webkit-input-placeholder {
-	color: red;
-}
-#contentInformation input.ltkinputnotvalid::-moz-placeholder {
-	color: red;
-}
-#contentInformation input.ltkinputnotvalid:-ms-input-placeholder {
-	color: red;
-}
-#contentInformation .ltk-error-message {
-	color: red;
-	font-size: 12px;
-	text-align: center;
-	display: block;
-	line-height: 24px;
+
+
+.maintitle {
+    display: inline-block;
+    font-size: 28px;
+    color: #4d4d4d;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 45px;
 }
 
-/* Buttons */
-#contentInformation .buttons {
-	width: 100%;
-	position: relative;
-}
-#contentInformation .ltkmodal-subscribe,
-#contentInformation .ltk-close-button {
-	width: 30%;
-	height: 40px;
-	float: right;
-	font-size: 12px;
-	font-weight: bold;
-	line-height: 20px;
-	cursor: pointer;
-	border-radius: 0px !important;
-	border: none;
-	box-shadow: none !important;
-	color: #fff;
-	background-color: #2c9aef;
-	display: inline-block;
-	text-decoration: none;
-	vertical-align: middle;
-	margin: 0;
-	padding: 0px 20px;
-	-webkit-appearance: none !important;
-	-moz-appearance: none !important;
-	appearance: none !important;
-	-webkit-transition: all 0.11s linear;
-	transition: all 0.11s linear;
-}
-#contentInformation .ltk-close-button {
-	float: none;
-	width: auto;
 
-	margin: 10px auto 0px;
-}
-#contentInformation .ltkmodal-subscribe:hover,
-#contentInformation .ltk-close-button:hover {
-	background-color: #0c78cb;
-}
-#contentInformation .ltkmodal-subscribe:focus,
-#contentInformation .ltk-close-button:focus {
-	outline: none;
+
+.title p {
+    font-size: 18px;
+    color: #4d4d4d;
+    font-weight: 400;
+    padding-top: 0;
+    margin-top: 0px;
+    margin-bottom: 6px;
+  }
+
+.onder_title {
+    display: inline-block;
+    color: #d4d4d4;
+    font-size: 14px;
+    border-bottom: 1px solid #d4d4d4;
+    padding-bottom: 15.5px;
+    width: 235px;
 }
 
-#contentInformation a.no-thanks {
-	display: inline-block;
-	font-weight: bold;
-	color: #333;
-	font-size: 12px;
-	padding: 10px;
-	text-decoration: underline;
-	-webkit-transition: all 0.11s linear;
-	transition: all 0.11s linear;
-}
-#contentInformation a.no-thanks:hover {
-	text-decoration:none;
-	color: #111;
+
+.long {
+    font-size: 13px;
+    color: #4d4d4d;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 294px;
+    margin: 50px auto;
+    text-align: left;
 }
 
-@media only screen and (max-width: 662px)  {
-	#ltkmodal-container {
-		width: 460px !important;
-		height: auto !important;
-	}
-	#ltkmodal-wrapper .ltk-img-container {
-		display: none;
-	}
-	#ltkmodal-wrapper #contentInformation {
-		float: none;
-		padding: 70px;
-		width: 100%;
-	}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid #6dabd2;
+    border-radius: 100px;
+    background-color: #6dabd2;
+    color: #ffffff;
+    width: 220px;
+    height: 48px;
+    line-height: 48px;
+    animation-name: buttonsanimation;
+    animation-duration: 2s;
 }
 
-@media only screen and (max-width: 462px)  {
-	/* Body */
-	#ltkmodal-container {
-		width: 100% !important;
-		height: auto !important;
-		top: 40px !important;
-		-webkit-transform: translate(-50%, 0) !important;
-		-moz-transform: translate(-50%, 0) !important;
-		-ms-transform: translate(-50%, 0) !important;
-		transform: translate(-50%, 0) !important;
-	}
-	#ltkmodal-wrapper {
-		width: 94% !important;
-	}
-	#ltkmodal-wrapper .mobileHide {
-		display: none;
-	}
-	#ltkmodal-wrapper #contentInformation {
-		padding: 40px 20px;
-	}
+@keyframes buttonsanimation {
+    0% {
+        visibility: hidden;
+    }
 
-	#contentInformation p {
-		margin: 16px 0;
-	}
+    25% {
+        visibility: hidden;
+    }
 
-	#contentInformation input[type="email"],
-	#contentInformation input[type="text"],
-	#contentInformation input[type="number"] {
-		float: none;
-		width: 100%;
-		text-align: center;
-		padding: 0;
-	}
+    50% {
+        visibility: hidden;
+    }
 
-	/* Buttons */
-	#contentInformation .ltkmodal-subscribe,
-	#contentInformation .ltk-close-button {
-		float: none;
-		width: 100%;
-		margin: 10px 0px 0px 0px;
-	}
+    75% {
+        visibility: visible;
+
+        /*transform: scale(2);*/
+        border-radius: 100%;
+        width: 48px;
+        height: 48px;
+        color: transparent;
+    }
+
+    100% {
+        visibility: visible;
+    }
 }
 </style>
